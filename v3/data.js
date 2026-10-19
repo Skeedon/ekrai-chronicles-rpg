@@ -1,0 +1,21 @@
+window.WORLD={
+classes:{
+'Воин':{hp:110,mp:24,atk:13,def:5,stats:{str:4,dex:1,int:0,cha:1},skill:'Сокрушающий удар'},
+'Следопыт':{hp:88,mp:36,atk:12,def:3,stats:{str:1,dex:4,int:1,cha:1},skill:'Прицельный выстрел'},
+'Маг':{hp:72,mp:65,atk:10,def:1,stats:{str:0,dex:1,int:5,cha:2},skill:'Молния'}},
+locations:[
+{id:'village',name:'Пепельная деревня',description:'Ночью в деревне пропадают люди. Староста просит найти источник проклятия.',foes:[{name:'Проклятый волк',hp:38,atk:8,def:1,drop:'fang'},{name:'Бродячий культист',hp:48,atk:10,def:2,drop:'rune'}],boss:{name:'Колокольный пастырь',hp:100,atk:15,def:3,drop:'bell',portrait:'pastor',trait:'ward'},check:{stat:'cha',dc:13,text:'Убедить старосту отдать старый ключ',success:'key',failure:'Староста тебе не доверяет.'}},
+{id:'marsh',name:'Болото забытых',description:'Чёрная вода скрывает руины и древнюю ведьму, которая торгует секретами.',foes:[{name:'Топяной утопленник',hp:54,atk:12,def:2,drop:'moss'},{name:'Болотный огонёк',hp:42,atk:14,def:1,drop:'essence'}],boss:{name:'Матерь трясины',hp:145,atk:19,def:4,drop:'heart',portrait:'mother',trait:'poison'},check:{stat:'int',dc:14,text:'Расшифровать руны на камне',success:'rune',failure:'Надпись рассыпалась в пыль.'}},
+{id:'citadel',name:'Костяная цитадель',description:'В крепости собирают останки павших, чтобы построить бессмертную армию.',foes:[{name:'Костяной латник',hp:75,atk:16,def:5,drop:'bone'},{name:'Алхимик без лица',hp:65,atk:19,def:3,drop:'essence'}],boss:{name:'Король Без Лица',hp:210,atk:24,def:6,drop:'crown',portrait:'king',trait:'shield'},check:{stat:'dex',dc:15,text:'Обойти ловушку и открыть тайник',success:'blade',failure:'Ловушка ранит тебя.'}},
+{id:'mountain',name:'Хребет грома',description:'Над ущельями непрерывно гремит гроза, а в ледяных пещерах спят чудовища.',foes:[{name:'Громовой гарпунщик',hp:90,atk:21,def:5,drop:'ore'},{name:'Ледяная гарпия',hp:80,atk:23,def:4,drop:'feather'}],boss:{name:'Грозовой исполин',hp:260,atk:29,def:8,drop:'thunder',portrait:'giant',trait:'charge'},check:{stat:'str',dc:17,text:'Сдвинуть валун у пещеры',success:'ore',failure:'Валун не поддаётся.'}},
+{id:'abyss',name:'Разбитая обсерватория',description:'Звёзды здесь отражаются в осколках зеркал, показывая возможные будущие.',foes:[{name:'Зеркальный двойник',hp:115,atk:25,def:6,drop:'mirror'},{name:'Астральный жнец',hp:100,atk:27,def:5,drop:'essence'}],boss:{name:'Смотритель Звёзд',hp:315,atk:34,def:9,drop:'star',portrait:'watcher',trait:'ward'},check:{stat:'int',dc:18,text:'Прочесть карту звёзд',success:'mirror',failure:'Звёздная карта остаётся загадкой.'}},
+{id:'rift',name:'Трон расколотого мира',description:'В центре бездны ожидает существо, которое помнит мир до рождения богов.',foes:[{name:'Рыцарь пустоты',hp:140,atk:30,def:8,drop:'bone'},{name:'Певчий конца',hp:125,atk:33,def:6,drop:'rune'}],boss:{name:'Архонт Пустоты',hp:420,atk:39,def:11,drop:'core',portrait:'archon',trait:'charge'},check:{stat:'cha',dc:19,text:'Уговорить пленённого духа помочь',success:'star',failure:'Дух отказывается.'}}
+],
+materials:{fang:'Клык проклятого волка',rune:'Тёмная руна',bell:'Сердце колокола',key:'Ржавый ключ',moss:'Болотный мох',essence:'Эссенция духов',heart:'Сердце трясины',bone:'Кость древнего воина',crown:'Корона безликого',blade:'Сломанный клинок',ore:'Грозовая руда',feather:'Перо гарпии',thunder:'Ядро грома',mirror:'Осколок зеркала',star:'Звёздная пыль',core:'Ядро пустоты'},
+recipes:[
+{id:'sword',name:'Клинок забытых',req:{blade:1,bone:2,rune:1},bonus:{atk:13},description:'Меч, выкованный из древних обломков.'},
+{id:'amulet',name:'Амулет трясины',req:{moss:2,heart:1,essence:1},bonus:{hp:35},description:'Защищает жизненную силу.'},
+{id:'thunderblade',name:'Грозовой рассекатель',req:{ore:2,thunder:1,feather:1},bonus:{atk:22},description:'Оружие, вобравшее силу бури.'},
+{id:'crown',name:'Венец безликого',req:{crown:1,mirror:1,star:1},bonus:{def:10},description:'Корона, скрывающая мысли.'},
+{id:'void',name:'Осколок вечности',req:{core:1,bell:1,star:1},bonus:{atk:28,hp:55},description:'Реликвия, меняющая судьбу.'}
+]};
