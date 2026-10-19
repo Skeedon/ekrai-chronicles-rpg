@@ -1,0 +1,49 @@
+/* CINEMATIC COMBAT UI · isolated design layer */
+:root{--ink:#070b11;--frame:#745535;--ember:#f1c88c}
+html,body{background-color:#060910!important}
+body{background:radial-gradient(ellipse 80% 55% at 50% -10%,#293044 0%,#0a0e17 65%,#05070c 100%)!important}
+body:before{opacity:.08}
+header,main{max-width:1460px}
+header{padding-top:16px}
+header h1{font-size:clamp(30px,3.4vw,52px)}
+header:after{margin-bottom:5px}
+nav{max-width:880px}
+nav button{font-size:12px;min-height:42px}
+#app{position:relative}
+#journey{grid-template-columns:minmax(250px,.77fr) minmax(440px,2.25fr) minmax(260px,.85fr);gap:15px}
+#journey #place{min-height:110px;padding:17px 24px;background:linear-gradient(90deg,#0d1723e9,#101521d9),radial-gradient(ellipse at 65% 20%,#ab683d77,transparent 65%)}
+#journey #place h2{font-size:clamp(27px,3vw,40px);margin-bottom:5px}
+#journey #place p{margin:4px 0 6px;font-size:13px}
+#journey #battle{border:1px solid #a47c49;box-shadow:0 0 0 3px #0b0d12,0 18px 65px #0009;padding:0;background:#080b11}
+#journey #actions{background:linear-gradient(165deg,#172231,#0a111c);border:1px solid #735333;box-shadow:0 15px 40px #0006;padding:12px;gap:9px}
+#journey>.panel:last-child{border:1px solid #534631;background:linear-gradient(#101824,#090f19)}
+#hud{padding:0!important;overflow:hidden;border:1px solid #745a3a;background:linear-gradient(160deg,#1b2839,#0b121c)}
+#hud:before{display:none}
+.hero-crest{display:flex;gap:13px;align-items:center;padding:20px 16px;background:radial-gradient(circle at 15% 20%,#a0783b2d,transparent 60%),linear-gradient(135deg,#2a3040,#121a27);border-bottom:1px solid #675137}
+.hero-avatar{width:73px;height:83px;flex:none;display:grid;place-items:center;background:radial-gradient(circle,#465572,#182234 75%);border:2px solid #bd925d;clip-path:polygon(50% 0,95% 15%,95% 75%,50% 100%,5% 75%,5% 15%);font-size:37px;text-shadow:0 0 25px #e1b36a}
+.hero-identity{min-width:0}.hero-identity small{display:block;color:#bfa680;font-size:9px;letter-spacing:.12em;line-height:1.5}.hero-identity h3{margin:3px 0;color:#f6ddad;font-size:30px}.hero-identity span{font-size:11px;color:#aeb9cb}
+.hero-resource{padding:13px 16px 0}.resource-label{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.11em;color:#d6bd98;font-weight:800}.resource-label b{color:#f4e3cb;letter-spacing:0;font-size:12px}.resource-track{height:13px;border:1px solid #4d4650;border-radius:3px;background:#0b111b;overflow:hidden;margin-top:6px;box-shadow:inset 0 2px 4px #000}.resource-track i{display:block;height:100%;transition:width .2s}.resource-track.health i{background:linear-gradient(90deg,#742635,#bf3e4d,#e47b73);box-shadow:0 0 16px #e35064}.resource-track.mana i{background:linear-gradient(90deg,#264979,#3977bd,#7bbcf7);box-shadow:0 0 16px #518fe7}
+.hero-attributes{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:20px 14px 15px}.hero-attributes>span{display:grid;grid-template-columns:24px 1fr;align-items:center;gap:2px;background:linear-gradient(145deg,#263143,#141d2a);border:1px solid #4d4b4a;padding:10px;border-radius:7px;color:#dfb778;font-size:20px}.hero-attributes b{font-size:18px;color:#f4e4ce}.hero-attributes small{grid-column:1/-1;font-size:9px;letter-spacing:.13em;color:#a4adbd}.hero-progress{display:flex;justify-content:space-between;background:#0c131e;border-top:1px solid #554635;padding:14px 16px;font-size:10px;font-weight:800;letter-spacing:.12em;color:#c7a877}.hero-progress b{color:#f6dfba}
+.ability-heading{width:100%;font-size:10px;letter-spacing:.2em;color:#d5ad71;font-weight:800;text-align:center;margin:4px 0 8px}
+#journey #actions .ability{display:flex;align-items:center;text-align:left;gap:11px;padding:8px 10px;min-height:72px;border:1px solid #4f5a67;border-radius:8px;background:linear-gradient(110deg,#283548,#111c2b);box-shadow:inset 0 1px #ffffff0c;white-space:normal}
+#journey #actions .ability-0{border-color:#a67b4a;background:linear-gradient(110deg,#58432c,#231e1b)}
+#journey #actions .ability-1{border-color:#6277b6;background:linear-gradient(110deg,#303e67,#161b36)}
+#journey #actions .ability-2{border-color:#548d88;background:linear-gradient(110deg,#234b4b,#122729)}
+#journey #actions .ability-3{border-color:#9b5f78;background:linear-gradient(110deg,#513143,#241924)}
+#journey #actions .ability-4{border-color:#8d7456;background:linear-gradient(110deg,#4b4030,#241e19)}
+.ability-glyph{flex:none;width:45px;height:48px;display:grid;place-items:center;border:1px solid #a58a6588;background:radial-gradient(circle at 50% 20%,#a68b5c40,#0c1422);border-radius:7px;font-size:23px;box-shadow:inset 0 0 12px #0008}
+.ability-info{flex:1;min-width:0}.ability-info strong{display:block;font-size:12px;line-height:1.35;color:#f3e0bf}.ability-info small{display:block;font-size:9px;line-height:1.5;margin-top:4px;color:#aeb6c6}.ability-arrow{color:#bba078;font-size:24px}
+#journey #actions button:hover{filter:brightness(1.28);transform:translateY(-1px)}
+.battle-stage{background:#070a10}
+.stage-header{padding:14px 18px 0}.stage-name{font-size:clamp(34px,3.4vw,51px);padding:8px 10px;color:#f8ddb1;text-shadow:0 3px 20px #000}
+.enemy-hp{margin:5px 24px 14px;height:24px}
+.scene-frame{border:0;border-top:1px solid #765b3e;border-bottom:1px solid #765b3e;min-height:420px}
+.scene-frame .creature-art{height:clamp(390px,41vw,600px);object-fit:contain;background:radial-gradient(ellipse at 50% 38%,#4c3438 0%,#1a1c29 44%,#080b12 85%);padding:8px 0}
+.scene-vignette{box-shadow:inset 0 0 85px 12px #05070e,inset 0 -105px 90px #05070e}
+.scene-caption{padding:18px}
+.scene-footer{padding:15px 18px;gap:14px}.scene-footer>div{padding:12px;background:#121b29;border-color:#68533d}.scene-footer strong{font-size:13px}
+#journey .log{font-size:12px}
+#setup{max-width:880px;margin:30px auto}
+@media(max-width:1150px){#journey{grid-template-columns:minmax(210px,.75fr) minmax(0,1.6fr)}#journey #battle{grid-column:2;grid-row:2/4}#journey #actions{grid-column:1;grid-row:3}#journey>.panel:last-child{grid-column:1/-1;grid-row:4}#hud{grid-column:1;grid-row:2}.scene-frame .creature-art{height:460px}}
+@media(max-width:850px){#journey{display:flex;flex-direction:column}#journey #place,#journey #battle,#journey #actions,#journey>.panel:last-child{width:100%}#hud{width:100%}.hero-crest{padding:13px}.hero-resource{padding:9px 15px 0}.hero-attributes{display:flex;flex-wrap:wrap;padding:12px;gap:6px}.hero-attributes>span{flex:1;min-width:70px}.hero-progress{padding:8px 14px}.scene-frame .creature-art{height:clamp(300px,70vw,490px)}#journey #actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;position:sticky;bottom:72px;z-index:5}#journey #actions .ability{min-height:65px;padding:7px}.ability-heading{grid-column:1/-1;margin:0}.ability-glyph{width:36px;height:39px;font-size:18px}.ability-info strong{font-size:11px}.ability-info small{font-size:8px}.ability-arrow{display:none}}
+@media(max-width:480px){.hero-avatar{width:54px;height:61px;font-size:29px}.hero-identity h3{font-size:25px}.hero-attributes>span{min-width:65px;padding:7px}.scene-frame .creature-art{height:320px}.scene-frame{min-height:320px}.stage-name{font-size:32px}.scene-footer{padding:8px;gap:6px}.scene-footer>div{padding:8px}.scene-footer strong{font-size:11px}#journey #actions .ability{gap:5px;min-height:58px}.ability-glyph{width:29px;height:34px;font-size:16px}.ability-info small{display:none}.ability-info strong{font-size:10px}#journey #actions{bottom:71px}}
