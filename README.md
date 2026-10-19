@@ -1,2 +1,18 @@
-# ekrai-chronicles-rpg
-ekrai-chronicles-rpg
+# ЭКРАЙ — Хроники Разлома
+
+Браузерная RPG, вдохновлённая атмосферой EKRAI RPG.
+
+## Запуск
+Откройте `index.html` или включите GitHub Pages: Settings → Pages → Deploy from a branch → main / root.
+
+## v2.0
+- 15 областей и 45 встреч, включая 5 боссов
+- 3 класса, способности, уровни, золото и зелья
+- 100 вариантов оружия и брони, инвентарь, экипировка, продажа предметов
+- Бестиарий, журнал, сохранения в localStorage
+- Отдельные HTML, CSS, JS и SVG-файлы
+
+Изображения боссов — оригинальные векторные стилизации, не официальные арты Warcraft III.
+
+## Структура
+`index.html`, `css/style.css`, `js/data.js`, `js/game.js`, `assets/bosses/*.svg`
